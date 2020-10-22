@@ -9,7 +9,8 @@ const weatherReport = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback("Cannot Find Location", undefined)
         } else {
-            callback(undefined, `${body.current.weather_descriptions[0]} .Its ${body.current.temperature}c degree  but it feels like ${body.current.feelslike}c degree here`)
+            callback(undefined, `${body.current.weather_descriptions[0]} .Its ${body.current.temperature}c degree  but it feels like ${body.current.feelslike}c degree here.\n
+            The humidity is ${body.current.humidity}% and the cloud cover is ${body.current.cloudcover}%`)
         }
     })
 }
