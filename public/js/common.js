@@ -15,7 +15,7 @@ $(document).ready(function() {
         } else {
             $("#pageBreak").show()
             $(".location").text("Loading...")
-            fetch(`http://localhost:3000/weather?search=${search}`).then((response) => {
+            fetch(`/weather?search=${search}`).then((response) => {
 
                 response.json().then((data) => {
                     if (data.error) {
